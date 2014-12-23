@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FoundationPress
 
 This is a WordPress starter theme based on Foundation 5 by Zurb. The purpose of FoundationPress, is to act as a small and handy toolbox that contains the essentials needed to build any design. FoundationPress is meant to be a starting point, not the final product. If you're looking for an all-in-one theme with built-in shortcodes, plugins, fancypancy portfolio templates or whatnot, I'm afraid you have to look elsewhere.
@@ -116,3 +117,9 @@ Pull requests are highly appreciated. About a dozen people have written parts of
 * [Build a responsive WordPress theme](http://www.webdesignermag.co.uk/tutorials/build-a-responsive-wordpress-theme/)
 * [Setting Up a Blog with Foundation and WordPress](http://www.thecodecub.com/htmlcss/setting-up-a-blog-with-foundation-and-wordpress/)
 
+=======
+nuscru-foundationpress
+======================
+
+Wordpress theme for nuscru.org.sg based on olefredrik's FoundationPress
+>>>>>>> 8aea7cc10f93b9130aac66ffbc19c496673a34fe
