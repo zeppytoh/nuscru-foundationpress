@@ -119,11 +119,11 @@ $include-html-global-classes: $include-html-classes;
 // $black       : #000000;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: $font-weight-normal;
-// $body-font-style: normal;
+ $body-bg: $white;
+ $body-font-color: $jet;
+ $body-font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-font-weight: 300;
+ $body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -190,14 +190,14 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
-// $header-font-style: normal;
-// $header-font-color: $jet;
-// $header-line-height: 1.4;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
-// $header-text-rendering: optimizeLegibility;
+ $header-font-family: "Montserrat", "Helvetica", Helvetica, Arial, sans-serif;
+ $header-font-weight: 700;
+ $header-font-style: normal;
+ $header-font-color: $jet;
+ $header-line-height: 1.4;
+ $header-top-margin: .2rem;
+ $header-bottom-margin: .5rem;
+ $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 // $h1-font-size: rem-calc(44);
@@ -1292,19 +1292,19 @@ $include-html-global-classes: $include-html-classes;
 
 // $include-html-tabs-classes: $include-html-classes;
 
-// $tabs-navigation-padding: rem-calc(16);
-// $tabs-navigation-bg-color: $silver  ;
-// $tabs-navigation-active-bg-color: $white;
-// $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
-// $tabs-navigation-font-color: $jet;
-// $tabs-navigation-active-font-color: $tabs-navigation-font-color;
-// $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
+ $tabs-navigation-padding: rem-calc(16);
+ $tabs-navigation-bg-color: rgba(255,255,255,0.1);
+ $tabs-navigation-active-bg-color: rgba(255,255,255,0.95);
+ $tabs-navigation-hover-bg-color: rgba(255,255,255,0.5);
+ $tabs-navigation-font-color: $jet;
+ $tabs-navigation-active-font-color: $tabs-navigation-font-color;
+ $tabs-navigation-font-size: rem-calc(16);
+ $tabs-navigation-font-family: $header-font-family;
 
-// $tabs-content-margin-bottom: rem-calc(24);
+ $tabs-content-margin-bottom: rem-calc(24);
 // $tabs-content-padding: $column-gutter/2;
 
-// $tabs-vertical-navigation-margin-bottom: 1.25rem;
+ $tabs-vertical-navigation-margin-bottom: 1.25rem;
 
 // 32. Thumbnails
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1355,8 +1355,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: $cru-gold;
+ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1388,8 +1388,8 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-link-bg-hover: #272727;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
+ $topbar-link-font-family: $header-font-family;
+ $topbar-link-text-transform: uppercase;
 // $topbar-link-padding: $topbar-height / 3;
 // $topbar-back-link-size: $h5-font-size;
 // $topbar-link-dropdown-padding: 20px;

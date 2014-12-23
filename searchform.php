@@ -6,8 +6,8 @@
 			<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e('Search', 'FoundationPress'); ?>">
 		</div>
 		<?php do_action('foundationPress_searchform_before_search_button'); ?>
-		<div class="small-4 columns">
-			<input type="submit" id="searchsubmit" value="<?php esc_attr_e('Search', 'FoundationPress'); ?>" class="prefix button">
+		<div class="small-4 columns searchbutton">
+			<i class="ft-star"></i><input type="submit" id="searchsubmit" value="<?php esc_attr_e('Go', 'FoundationPress'); ?>" class="prefix button">
 		</div>
 		<?php do_action('foundationPress_searchform_after_search_button'); ?>
 	</div>
