@@ -33,7 +33,7 @@ function FoundationPress_styles() {
 		$custom_css .= "	
 				#header-banner {
 					background: url($image[0]);
-					
+					background-size: cover;
 				}";
 	}
 
