@@ -16,6 +16,15 @@ function FoundationPress_theme_support() {
     // Add post formarts support: http://codex.wordpress.org/Post_Formats
     add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
+	// custom header
+	$args = array(
+		'width'         => 345,
+		'height'        => 240,
+		'flex-height'    => true,
+		'default-image' => get_template_directory_uri() . '/img/logo.png',
+		'uploads'       => true,
+	);
+	add_theme_support( 'custom-header', $args );
 }
 
 add_action('after_setup_theme', 'FoundationPress_theme_support'); 
