@@ -13,11 +13,7 @@
       throttle_delay: 30, // calculation throttling to increase framerate
       fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
       offset_by_height: true,  // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
-<<<<<<< HEAD
       duration: 700, // animation duration time
-=======
-      duration: 700, // animation duration time
->>>>>>> origin/master
       easing: 'swing' // animation easing
     },
 
