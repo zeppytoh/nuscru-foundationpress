@@ -8,7 +8,7 @@
   Import the building blocks you need for your project.
   Reducing the number of imported components will optimize page speed.
 */
-
+@import "config/colors"; // Custom colors.
 @import "config/settings"; // Default settings file. Uncomment each setting you need to change
 @import "assets/icons"; // Load Foundation icon fonts
 
@@ -55,5 +55,5 @@
   My custom styles:
   Add your own folders and scss files for your project and import them below
 */
-
+@import "compass/css3";
 @import "site/base";
