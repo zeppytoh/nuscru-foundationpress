@@ -3566,11 +3566,7 @@
       throttle_delay: 30, // calculation throttling to increase framerate
       fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
       offset_by_height: true,  // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
-<<<<<<< HEAD
       duration: 700, // animation duration time
-=======
-      duration: 700, // animation duration time
->>>>>>> origin/master
       easing: 'swing' // animation easing
     },
 
@@ -4624,11 +4620,6 @@
     toggle_bg : function (el, modal, state) {
       var settings = el.data(this.attr_name(true) + '-init') || this.settings,
             bg_root_element = settings.bg_root_element; // Adding option to specify the background root element fixes scrolling issue
-<<<<<<< HEAD
-
-=======
-
->>>>>>> origin/master
       if (this.S('.' + this.settings.bg_class).length === 0) {
         this.settings.bg = $('<div />', {'class': this.settings.bg_class})
           .appendTo(bg_root_element).hide();
