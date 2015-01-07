@@ -1,6 +1,13 @@
 {
-  "name": "foundation-press",
+  "name": "foundationpress",
+  "main": [
+    "css/foundation.css",
+    "js/foundation.js"
+  ],
+  "ignore": [
+  ],
   "dependencies": {
-    "foundation": "5.4.7"
+    "foundation": "zurb/bower-foundation",
+    "compass-mixins": "Igosuki/compass-mixins"
   }
 }
