@@ -1,29 +1,39 @@
-<?php function FoundationPress_comments($comment, $args, $depth) {
-	$GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>">
-			<header class="comment-author">
-				<?php echo get_avatar($comment,$size='48'); ?>
-				<div class="author-meta">
-					<?php printf(__('<cite class="fn">%s</cite>', 'FoundationPress'), get_comment_author_link()) ?>
-					<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'FoundationPress'), get_comment_date(),  get_comment_time()) ?></a></time>
-					<?php edit_comment_link(__('(Edit)', 'FoundationPress'), '', '') ?>
-				</div>
-			</header>
+<?php
+if ( have_comments() ) :
+	if( (is_page() || is_single()) && (!is_home() && !is_front_page()) ) :
+?>
+	<section id="comments"><?php
 
-			<?php if ($comment->comment_approved == '0') : ?>
-				<div class="notice">
-					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'FoundationPress') ?></p>
-				</div>
-			<?php endif; ?>
 
-			<section class="comment">
-				<?php comment_text() ?>
-				<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-			</section>
+		wp_list_comments(
 
-		</article>
-<?php } ?>
+			array(
+				'walker'            => new FoundationPress_comments(),
+				'max_depth'         => '',
+				'style'             => 'ol',
+				'callback'          => null,
+				'end-callback'      => null,
+				'type'              => 'all',
+				'reply_text'        => __('Reply', 'FoundationPress'),
+				'page'              => '',
+				'per_page'          => '',
+				'avatar_size'       => 48,
+				'reverse_top_level' => null,
+				'reverse_children'  => '',
+				'format'            => 'html5',
+				'short_ping'        => false,
+				'echo'  	    => true,
+				'moderation' 	    => __('Your comment is awaiting moderation.', 'FoundationPress'),
+			)
+		);
+
+		?>
+
+ 	</section>
+<?php
+	endif;
+endif;
+?>
 
 <?php
 // Do not delete these lines
@@ -41,7 +51,10 @@
 	}
 ?>
 <?php // You can start editing here. Customize the respond form below ?>
-<?php if ( have_comments() ) : ?>
+<?php
+if ( have_comments() ) :
+	if( (is_page() || is_single()) && (!is_home() && !is_front_page()) ) :
+?>
 	<section id="comments">
 		<h3><?php comments_number(__('No Responses to', 'FoundationPress'), __('One Response to', 'FoundationPress'), __('% Responses to', 'FoundationPress') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 		<ol class="commentlist">
@@ -55,8 +68,14 @@
 			</nav>
 		</footer>
 	</section>
-<?php endif; ?>
-<?php if ( comments_open() ) : ?>
+<?php
+	endif;
+endif;
+?>
+<?php
+if ( comments_open() ) :
+	if( (is_page() || is_single()) && (!is_home() && !is_front_page()) ) :
+?>
 <section id="respond">
 	<h3><?php comment_form_title( __('Leave a Reply', 'FoundationPress'), __('Leave a Reply to %s', 'FoundationPress') ); ?></h3>
 	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
@@ -91,4 +110,7 @@
 	</form>
 	<?php endif; // If registration required and not logged in ?>
 </section>
-<?php endif; // if you delete this the sky will fall on your head ?>
+<?php
+	endif; // if you delete this the sky will fall on your head
+endif; // if you delete this the sky will fall on your head
+?>
