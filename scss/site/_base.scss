@@ -99,6 +99,11 @@ img.alignright {
 	background: darken($cru-gold, 50%);
 }
 
+.entry-content {
+  @include grid-row();
+
+}
+
 footer {
   font-family: $header-font-family;
   font-size: 0.9rem;
@@ -119,7 +124,7 @@ footer {
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
 	footer.row {
-		margin-top: rem-calc(60);
+//		margin-top: rem-calc(60);
 	}
 }
 
@@ -142,11 +147,6 @@ footer.page-footer {
 }
 /** Section Document styling
  */
-section.container[role="document"] {
-  padding-bottom: rem-calc(54);
-  border-bottom: 6px solid darken($cru-gray, 40%);
-
-}
 
 /**
  * 4.0 Content
@@ -158,14 +158,16 @@ section.container[role="document"] {
 	 * 4.1 Pages
 	 * ------------------------------------
 	 */
-
-      header.sub-page {
+      .container[role="document"] {
         -moz-box-shadow:    inset 0 2px 8px #333333;
         -webkit-box-shadow: inset 0 2px 8px #333333;
         box-shadow:         inset 0 2px 8px #333333;
         background-image:     url('../img/headers/ourleaders.jpg');
         background-size: auto;
         background-repeat: repeat;
+      }
+      .sub-page {
+
 
         color: white;
         margin-bottom: 1em;
@@ -181,6 +183,12 @@ section.container[role="document"] {
         hr {
           border: 2px dashed white;
         }
+        .tabs-content, .page-content {
+          background: $white;
+          color: black;
+          margin-bottom: 4rem;
+        }
+
       }
       .page-template .top-bar-container, .tab-bar {
         margin-bottom: 0;
@@ -209,25 +217,27 @@ section.container[role="document"] {
           }
         }
       }
-      .page-our-leaders header.sub-page {
+      .page-our-leaders .container[role="document"] {
         background-image: url('../img/headers/ourleaders.jpg');
       }
-      .page-about header.sub-page {
+      .page-about .container[role="document"] {
         background-image: url('../img/headers/nuscru.jpg');
         background-size: cover;
 
       }
-      .page-be-involved header.sub-page {
+      .page-be-involved .container[role="document"] {
         background-image: url('../img/headers/be-involved.jpg');
       }
-      .page-giving header.sub-page {
+      .page-giving .container[role="document"] {
         background-image: url('../img/headers/giving.jpg');
       }
 
-      .page-special-events header.sub-page {
+      .page-special-events .container[role="document"] {
         background-image: url('../img/headers/special-events.jpg');
       }
-
+      .page-home .container[role="document"] {
+        background-image: none;
+      }
     // Heading
     div.mission-statement {
         color: white;
@@ -320,7 +330,7 @@ section.container[role="document"] {
       font-family: $header-font-family;
       font-size: 1rem;
       color: $cru-gold;
-      margin-bottom: -4rem;
+      margin-bottom: -2rem;
       text-shadow: 3px 2px 3px black;
 
       position: relative;
@@ -461,5 +471,10 @@ section.container[role="document"] {
 			}
 		}
 	}
+}
+
+.sub-page .entry-content {
+  @include grid-column(12);
+  background-color: white;
 }
 

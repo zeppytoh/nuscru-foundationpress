@@ -51,7 +51,9 @@
 	</nav>
 
 	<?php get_template_part('parts/off-canvas-menu'); ?>
+      <header id="header-banner">
 
+      </header>
 	<?php get_template_part('parts/top-bar'); ?>
 
 <section class="container" role="document">

@@ -1,16 +1,13 @@
 <?php 
 /* @package WordPress @subpackage FoundationPress @since FoundationPress NUSCru 1.0 */
   get_header( 'home' ); ?>
-
-
-
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class() ?>id="post-
   <?php the_ID(); ?>">
   <?php do_action( 'foundationPress_page_before_entry_content'); ?>
-  <div class="entry-content">
+
     <?php the_content(); ?>
-  </div>
+
   <footer>
     <?php wp_link_pages(array( 'before'=>'
     <nav id="page-nav">
@@ -28,7 +25,7 @@
 
 <?php do_action( 'foundationPress_after_content'); ?>
 
-<div class="row">
+<div class="entry-content">
   <div class="small-12 medium-8 large-8 columns feature-image-post">
 
     <?php do_action( 'foundationPress_before_content'); ?>

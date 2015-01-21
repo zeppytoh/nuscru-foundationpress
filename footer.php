@@ -1,4 +1,3 @@
-</section>
 <footer class="page-footer" id="footer">
   <div class="row">
 	<?php do_action('foundationPress_before_footer'); ?>
@@ -6,6 +5,8 @@
 	<?php do_action('foundationPress_after_footer'); ?>
   </div>
 </footer>
+</section> <!-- section.container -->
+
 <a class="exit-off-canvas"></a>
 	<?php do_action('foundationPress_layout_end'); ?>
 	</div>

@@ -74,7 +74,7 @@
        </div>
         </div>
       </header>
-      <?php get_template_part('parts/top-bar'); ?>
+      <?php get_template_part('parts/top-bar-home'); ?>
 
 <section class="container" role="document">
 	<?php do_action('foundationPress_after_header'); ?>
