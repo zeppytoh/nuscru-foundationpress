@@ -15,7 +15,6 @@ get_header(); ?>
                   <hr />
                   <div class="row">
                     <div class="entry-content">
-
                       <?php the_content(); ?>
                     </div>
                   </div>

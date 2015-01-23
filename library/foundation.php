@@ -210,7 +210,6 @@ function add_slug_body_class( $classes ) {
   }
 
   add_filter( 'body_class', 'add_slug_body_class' );
-?>
 
 class FoundationPress_comments extends Walker_Comment{
 

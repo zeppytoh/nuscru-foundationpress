@@ -69,7 +69,7 @@ img.alignright {
 
 
 // Add some whitespace between top bar and content
-.top-bar-container, .tab-bar {
+.tab-bar {
 	margin-bottom: rem-calc(32);
 }
 
@@ -246,8 +246,8 @@ footer.page-footer {
           margin: 0 0 1em 0;
           padding: 1em;
           text-align: center;
-          font-family:monospace;
-          font-size: 1.3rem;
+          font-family: "Montserrat", helvetica, sans-serif;
+          font-size: 1rem;
           @media #{$medium-up} {
             margin: 3em 0 0 0;
             padding: 1em 0;

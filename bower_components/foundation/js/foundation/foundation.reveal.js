@@ -242,6 +242,7 @@
     toggle_bg : function (el, modal, state) {
       var settings = el.data(this.attr_name(true) + '-init') || this.settings,
             bg_root_element = settings.bg_root_element; // Adding option to specify the background root element fixes scrolling issue
+
       if (this.S('.' + this.settings.bg_class).length === 0) {
         this.settings.bg = $('<div />', {'class': this.settings.bg_class})
           .appendTo(bg_root_element).hide();
